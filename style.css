@@ -15,7 +15,7 @@ h2 {
   position: relative;
   font-size: 10em;
   text-transform: uppercase;
-  color: #fff;
+  color: transparent;
   background: linear-gradient(
     to bottom,
     #222 0%,
@@ -23,4 +23,8 @@ h2 {
     #111 50%,
     #111 100%
   );
+  -webkit-backdrop-clip: text;
+}
+h2::before {
+  content: attr(data-text);
 }
